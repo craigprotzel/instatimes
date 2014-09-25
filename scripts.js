@@ -41,6 +41,8 @@ function getInstagramData(){
 		error: function(data){
 			//console.log("Oh no");
 			console.log(data);
+			var sorry = "Oh no, looks like we're having problems. Try reloading.";
+			$('#loading').html(sorry);
 		},
 		success: function(data){
 			//console.log("WooHoo Instagram");
