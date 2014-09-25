@@ -3,11 +3,9 @@ The InstaTimes
 
 A Mashup of the most recent NY Times headlines with the most recent Instagram photos tagged with the word "news".
 
-From the NYU Class [Mashups - Creating with Web APIs](https://github.com/craigprotzel/Mashups)
+From the NYU Class [Mashups - Creating with Web APIs](https://github.com/craigprotzel/Mashups). Uses the [NY Times API](http://developer.nytimes.com/) and the [Instagram API](http://instagram.com/developer/)
 
-Uses the [NY Times API](http://developer.nytimes.com/) and the [Instagram API](http://instagram.com/developer/)
-
-This is Example 1 of 3. Code for all 3 Instatimes Examples located [HERE](https://github.com/craigprotzel/Mashups/tree/master/04_Structuring_Your_App/InstaTimes)
+This is **Example 1** of 3. Code for all 3 Instatimes Examples located [HERE](https://github.com/craigprotzel/Mashups/tree/master/04_Structuring_Your_App/InstaTimes)
 
 ##### InstaTimes Example Index
 * Example 1 - On page load, grab data from the NY Times first and Instagram second. Then call a function to append all the data to the page.
