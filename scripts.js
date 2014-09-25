@@ -5,7 +5,7 @@ var instagramData = [];
 function createHTML(){
 	//Figure out the length of the shorter array
 	var dataLength = Math.min(nyTimesData.length, instagramData.length);
-	console.log(dataLength);
+	//console.log(dataLength);
 
 	var htmlString = '';
 	for (var i = 0; i < dataLength; i++){
@@ -29,7 +29,7 @@ function getInstagramData(){
 		type: 'GET',
 		dataType: 'jsonp',
 		error: function(data){
-			console.log("Oh no");
+			//console.log("Oh no");
 			console.log(data);
 
 		},
