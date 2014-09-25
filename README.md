@@ -1,1 +1,1 @@
-My Instamtimes example.
+Instamtimes Example 1 deployed.

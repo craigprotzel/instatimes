@@ -1,23 +1,43 @@
 body{
 	font-family: 'Times New Roman', Arial;
 	font-size: 16px;
-	background-color: rgb(220,220,220);
+	margin: 0;
+	padding: 0;
 }
-
 h1{
 	text-align: center;
 }
 #thePaper{
+	position: absolute;
 	width: 90%;
 	text-align: center;
-	margin: 20px auto;
+	margin: 20px 5%;
 }
 .container{
 	float: left;
 	width: 20%;
-	height: 440px;
-	margin: 20px;
+	height: 420px;
+	margin: 5px 2.5%;
+	overflow: hidden;
 }
 img{
-	width: 80%;
+	width: 90%;
+}
+
+@media (max-width: 1000px) {
+	.img {
+		width: 100%;
+	}
+	.container{
+		width: 40%;
+		margin: 20px 5%; 	
+	}
+}
+
+@media (max-width: 600px) {
+	.container{
+		width: 90%;
+		float: none;
+	}
+
 }

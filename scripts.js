@@ -12,7 +12,17 @@ function createHTML(){
 		htmlString += '<div class="container">';
 		htmlString += '<h3>' + nyTimesData[i].headline.main + '</h3>';
 		htmlString += '<img src=' + instagramData[i].images.low_resolution.url + ' />';
-		htmlString += '<p>' + nyTimesData[i].snippet + '</p>';
+
+		//Check length of snippet, limit to 140 characters
+		var articleSnippet = '';
+		if (nyTimesData[i].snippet.length > 140){
+			articleSnippet = nyTimesData[i].snippet.substr(0,140) + '...';
+		}
+		else{
+			articleSnippet = nyTimesData[i].snippet;
+		}
+		//Finish the html string
+		htmlString += '<p>' + articleSnippet + '</p>';
 		htmlString += '</div>';
 	}
 	$('#loading').hide();
@@ -22,7 +32,7 @@ function createHTML(){
 //Instagram API Request
 function getInstagramData(){
 	var myInstaKey = '9474e8cecf094d94b0cf366097977931';
-	var searchTerm = 'nyuad';
+	var searchTerm = 'news';
 	var instagramURL = 'https://api.instagram.com/v1/tags/' + searchTerm + '/media/recent?client_id=' + myInstaKey;
 	$.ajax({
 		url: instagramURL,
@@ -31,15 +41,12 @@ function getInstagramData(){
 		error: function(data){
 			//console.log("Oh no");
 			console.log(data);
-
 		},
 		success: function(data){
-			console.log("WooHoo Instagram");
+			//console.log("WooHoo Instagram");
 			//console.log(data);
-
 			instagramData = data.data;
 			//console.log(instagramData);
-
 			//Genereate HTML
 			createHTML();
 		}
@@ -59,15 +66,12 @@ function getNYTimesData(){
 			console.log("Oh no...");
 		},
 		success: function(data){
-			console.log("WooHoo NY Times");
+			//console.log("WooHoo NY Times");
 			//console.log(data);
-
 			nyTimesData = data.response.docs;
-			console.log(nyTimesData);
-
+			//console.log(nyTimesData);
 			//Make request to Instagram API
 			getInstagramData();
-
 		}
 	});
 }
