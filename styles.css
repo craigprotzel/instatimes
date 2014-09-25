@@ -4,6 +4,12 @@ body{
 	margin: 0;
 	padding: 0;
 }
+#gh-link{
+	position: absolute;
+	top: 5px;
+	right: 30px;
+	font-size: 14px;
+}
 h1{
 	text-align: center;
 }
