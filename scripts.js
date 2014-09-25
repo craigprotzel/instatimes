@@ -38,7 +38,7 @@ function getInstagramData(){
 			//console.log(data);
 
 			instagramData = data.data;
-			console.log(instagramData);
+			//console.log(instagramData);
 
 			//Genereate HTML
 			createHTML();
